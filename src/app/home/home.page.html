@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Peliculas Varias
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-grid>
+      <ion-row>
+        @for(interfaz of movie; track interfaz.id){
+          <ion-col size="12" size-md="3">
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>Nombre: {{interfaz.title}}</ion-card-title>
+                <ion-card-subtitle>Precio: {{interfaz.price}}</ion-card-subtitle>
+              </ion-card-header>
+              <ion-card-content>
+                Descripción: {{interfaz.overview}}
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        }
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+
+
+
+
+
+
+
+
